@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>노랑풍선_인기 급상승 여행지</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+      *{font-family: "Noto Sans KR", sans-serif; margin:0px; padding:0px;}
+      .b_btn{
+        display: inline-block;
+        width: 50px; height: 50px;
+        background: #111;
+        padding: 0px;
+        text-align: center;
+        border-radius: 50%;
+        margin-top: 20px;
+        margin-left: 5%;
+      }
+      .b_btn > img{
+        width: 30px;
+        transform: translateY(9px);
+      }
+      h2{
+        margin-left: 5%;
+        line-height: 52px;
+      }
+
+      .best_lank{
+        margin: 20px auto;
+        width: 90%;
+        height: 380px;
+        border: 2px solid #333;
+        border-radius: 20px;
+        position: relative;}
+
+      .best_lank > h3{ 
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+        line-height: 80px;
+        color: #333;}
+
+        .best_lank > ul{
+          width: 90%; margin: 30px auto;
+          display: flex; justify-content: space-around;}
+          
+        .best_lank > ul > li{
+          width: 20%;
+          list-style:none;
+          text-align:center; position: relative;}
+
+        .best_lank > ul > li > span{
+          position: absolute;
+          font-size:20px; /*font-weight: bold;*/
+          color:#fff;
+          left:50%; top:50%;
+          transform:translate(-50%, -50%)}
+
+        img{width: 90%;}
+        .left_btn, .right_btn{
+          position: absolute;
+          width: 60px; top:170px;}
+
+        .left_btn{left:10px}
+        .right_btn{right:10px}
+
+
+    </style>
+  </head>
+
+  <body>
+    <a href="../index.html" title="메인페이지 바로가기" class="b_btn">
+      <img src="../images/icon_home.png" alt="icon_home">
+    </a>
+    <h2>실습예제_노랑풍선_인기 급상승 여행지</h2>
+
+    <article class="best_lank">
+      <h3>인기 급상승 여행지</h3>
+      <ul>
+        <li><span>다낭</span><img src="./images/travel1.png" alt="다낭"></li>
+        <li><span>오사카</span><img src="./images/travel2.png" alt="오사카"></li>
+        <li><span>대만</span><img src="./images/travel3.png" alt="대만"></li>
+        <li><span>나트랑</span><img src="./images/travel4.png" alt="나트랑"></li>
+        <li><span>괌</span><img src="./images/travel5.png" alt="괌"></li>
+      </ul>
+      
+      <img src="./images/left_btn.png" alt="왼쪽버튼" class="left_btn">
+      <img src="./images/right_btn.png" alt="오른쪽버튼" class="right_btn">
+    </article>
+  </body>
+</html>

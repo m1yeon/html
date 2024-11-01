@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>15_추가 폼태그와  속성들</title>
+    <style>
+      label[for=id_txt], label[for=pw_txt]{
+        display: none;}
+    </style>
+  </head>
+
+  <body>
+    <h2>15_추가 폼태그와  속성들</h2>
+    <p>html5에서 추가된 폼태그와 속성들은 현재 사용하고 있는 브라우저(크롬, ms edge, 파이어폭스, 오페라, 사파리, 웨일 등)에서 버전별 지원을 하기 때문에 지원 상황을 확인하고 사용해야 한다. http://caniuse.com(브라우저 버전별 태그 지원 유무 확인 사이트)
+
+    <h3>1. 폼양식을 그룹 지정하기 위한 요소 _ fieldset, legend</h3>
+    <p>form name="폼이름" method="post(폼 내용 암호화)/get(내용 공개)" action="받을 서버 주소(폼 양식에 따라 작성된 내용을 어디 서버로 보낼지)"</p>  
+    <form name="폼이름" method="get/post" action="받을 서버주소">
+
+      <fieldset>
+        <legend>필수입력정보</legend>
+        <p><label for="id_txt">아이디</label><input type="text" placeholder="아이디 입력" id="id_txt"></p>
+        <p><label for="pw_txxt">비밀번호</label><input type="password" placeholder="비밀번호" id="pw_txt"></p>
+        <p>label(제목)이 나올 경우 placeholder로 안의 내용은 label과 동일하게 가면 안되고 비밀번호 - 비밀번호 예시를 보여줘야함</p>
+        <p><label for="pw_txxt">비밀번호</label><input type="password" placeholder="acb1234!@" id="pw_txt"></p>
+        <p><input type="submit" value="로그인"></p>
+        </fieldset>
+
+    <p>placeholder="폼 안에 어떤 내용이 들어갈 지 알려줄 수 있는 문구를 입력"</p>
+    
+    <p>label 태그를 써서 for="a"속성과 id="a" 속성이 같은 팀?이라는 것을 알려줌_label 태그는 웹접근성/시각장애인을 위해 꼭 써줘야함(*lable 태그를 안보이게 숨길 수 있음)</p>
+
+
+    <fieldset>
+      <legend>선택입력정보</legend>
+      <p>
+        <label>주소 : </label><input type="adress" placeholder="주소를 입력하세요">
+      </p>
+      <p>
+        <label>이메일 : </label><input type="email" placeholder="abc1234@naver.com">
+      </p>
+    </fieldset>
+      <br>
+    <input type="submit" value="가입하기">
+
+    <p>
+      주소 쓸 때는 type="adress" , 이메일 쓸 때는 type="email" 속성을 사용해야 한다. <br>
+      이 속성의 장점은 엉터리 이메일을 쓰면 안내문구가 알아서 나온다
+    </p>
+
+    <p>placeholde : 사용자가 양식에 데이터를 입력 시 입력 할 내용을 미리 알려주어 오류가 나지 않도록 방지해주는 역할을 함. 웹접근성 측면에서 도움이 됨</p>
+
+
+<!-- ----------------------------------------------------------------------------- -->
+
+<br>
+    <h3>2. search : 헤더영역, 콘텐츠 영역에서 사용자가 원한느 정보를 직접 입력하여 검색할 수 있도록 하고자 할 때 사용하는 양식으로서 단어를 입력하면 오른쪽 끝에 'X' 표시가 뜨며, 클릭시 내용이 삭제됨.</h3>
+    <input type="search" placeholder="11월 이벤트 특가">
+
+    <h3>3. email : 이메일 주소를 입력하기 위한 박스로서 입력 양식이 맞지 않으 경우 에러가 발생한다.</h3>
+    <input type="email" placeholder="id@domain.co.kr"><input type="button" value="이메일 확인">
+
+    <h3>4. URL : 사용자가 도메인 주소를 입력 할 수 있도록 하는 양식이며, 주소형식이 맞지 않을 경우 에러 메세지가 나온다.</h3>
+    <input type="url" placeholder="도메인 주소 입력 예) http://www/domain.co. kr or net ">
+    <input type="button" placeholder="주소 전송">
+
+    <h3>5. number : 숫자를 입력하기 위한 요소로서 직접 입력하거나 화살표 버튼을 사용하여 설정이 가능하다.</h3>
+    <input type="number">
+
+    <h3>6. date : 년, 월, 일을 선택하기 위한 요소로서 클릭 시 달력창이 활성화됨</h3>
+    <input type="date">
+    <p>호환성이 떨어지는 편이라 잘 사용하지는 않지만, 예약 하는 사이트는 있어야함</p>
+
+    <h3>7. color  : 사용자가 원하는 색상을 고르기 위한 양식</h3>
+    <input type="color">
+
+    <h3>8. progress : 진행 정도를 나타내느 바를 만드는 태그로서 max. value 속성을 사용한다.</h3>
+    HTML5 <progress value="80" max="100"></progress> <br>
+    CSS <progress value="20" max="200"></progress> <br>
+    JAVASCRIPT <progress value="30" max="300"></progress> <br>
+      </form>
+
+      <!-- progress 태그 설명 https://ordinary-code.tistory.com/137 -->
+  </body>
+</html>

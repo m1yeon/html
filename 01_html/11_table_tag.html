@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>11_테이블 태그</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+      *{font-family: "Noto Sans KR", sans-serif; padding: 0px 10px;}
+      p{margin: 0px;}
+      h3{margin: 10px 0px; padding: 10px; font-size: 18px;}
+    
+      .b_btn{
+        display: inline-block;
+        width: 50px; height: 50px;
+        background: #111;
+        padding: 0px;
+        text-align: center;
+        border-radius: 50%;
+        margin-top: 10px;
+      }
+      .b_btn > img{
+        width: 30px;
+        transform: translateY(9px);
+      }
+      b{padding: 0px;}
+      .box{
+        border: 1px solid #333;
+        border-radius: 15px;
+        padding-bottom: 20px;
+      }
+
+      .t01{border: 2px solid #777; width: 300px; border-collapse: collapse;} 
+      /*border-collapse 셀과 셀 사이의 간격을 없애수는 속성*/
+
+      .t01 th, .t01 td{border: 2px solid #777}
+        /* 셀 제목은 중앙 정렬, 굵게   내용은 왼쪽 정렬, 기본  */
+      .t02{width: 500px; border: 3px double red; border-collapse:collapse}
+      .t02 th, .t02 td{width: 500px; border: 3px double #ff0000;}
+
+      /* 실습예제 */
+      .t03 {
+        width: 100%; height: 200px;
+        border-top: 2px solid #000;
+        border-bottom: 1px solid #000;
+        border-collapse: collapse;}
+      .t03 th{background: #ccc; height: 40px;}
+      .t03 th, .t03 td{border: 1px solid #777; text-align: center;}
+      .t03 .cel01{border-left: none;}
+      .t03 .cel02{text-align: left;}
+      .t03 .cel03{border-right: none;}
+      .t03 caption{font-size: 18px; font-weight:bold;}
+
+    </style>
+  </head>
+
+  <body>
+    <a href="../index.html" title="메인페이지 바로가기" class="b_btn">
+      <img src="../images/icon_home.png" alt="icon_home">
+    </a>
+    <h2>12_테이블 태그</h2>
+    <p><b>테이블 태그란?</b><br>
+      - 테이블 태그는 표를 만들기 위한 태그로서 <br>
+      - table, tr(줄, 행), td(칸,셀), th(셀제목, table header), caption(설명, 제목)태그로 구성되어 있음 </p>
+      <p>- 달력, 로그인, 회원가입, 약관내용 페이지, 문의하기 게시판, 공지사항 게시판 등에서 많이 사용됨</p>
+    <br>
+    <div class="box">
+      <h3>1. 테이블 태그의 기본 작성 법</h3>
+      <table class="t01">   
+        <caption>표제목</caption>
+        <tr>
+          <th>셀제목</th><th>셀제목</th>
+        </tr>
+        <tr>
+          <td>셀내용</td><td>셀제목</td>
+        </tr>
+      </table>
+
+      <p><b>- th태그</b>는 <b>셀제목</b>을 작성 할 때 사용하는 태그 요소로서
+      <b>글자가 진하게, 가운데 정렬</b>되는 특징이 있음</p>
+      <p><b>- caption태그</b>는 <b>표제목, 설명문구</b>를 넣고자 할 때 사용하며, 기본적으로 <b>가운데 정렬</b>되는 특징이 있음</p>
+    </div>
+    <br>
+    <div class="box">
+      <h3>2. 테이블 셀 병합하기 - colspan(가로병합), rowspan(세로병합)</h3>
+      <table class="t01">
+      <caption>가로줄 병합</caption>
+      <tr>
+        <th>셀제목</th><th>셀제목</th>
+      </tr>
+      <tr>
+        <td colspan="2">셀내용_가로병합은 colspan 속성을 사용함</td>
+      </tr>
+      </table>
+      
+      <table class="t01">
+        <caption>세로줄 병합</caption>
+        <tr>
+          <th>셀제목</th><th>셀제목</th>
+        </tr>
+        <tr>
+          <td rowspan="2">셀내용</td>
+        </tr>
+      </table>
+    </div>
+    <br>
+
+    <div class="box">
+      <h3>웹표준, 웹접근성에 맞는 테이블 제작</h3>
+      <p>- 웹 접근성을 위해 tfoot을 tbody의 순서를 위로 올려,<br>
+        스크린리더를 통해 장애인분들이 스피커로 음성을 들을 때 표의 본문 내용을 먼저 읽기 보다는 아래 내용을 먼저 일어서 전체 내용을 빠르게 파악할 수 있기 때문에 순서를 변경해준다.
+      </p>
+      <p>- t02에 테두리 색상은 빨강, 3px 이중선, 가로500px 서식적용</p>
+      <br>
+      <table class="t02">
+        <caption>2학년 2학기 성적현황</caption>
+      
+        <thead>
+        <tr>
+          <th>성명</th><th>국어점수</th><th>수학점수</th><th>합계</th>
+        </tr>
+      </thead>
+      
+        <tfoot>
+        <tr>
+          <td>합계</td><td>150</td><td>150</td><td>300</td>
+        </tr>
+      </tfoot>
+      
+      <tbody>
+        <tr>
+          <td>이순신</td><td>80</td><td>100</td><td>180</td></tr>
+          <tr>
+          <td>홍길동</td><td>70</td><td>50</td><td>120</td>
+        </tr>
+      </tbody>
+      </table>
+
+    </div>
+    <br>
+    <div class="box">
+      <h3>실습예제</h3>
+      <table class="t03">
+        <caption>실습예제</caption>
+      
+        <thead>
+        <tr>
+          <th class="cel01">순번</th><th>제목</th><th>담당부서</th><th>첨부</th><th class="cel03">등록일</th>
+        </tr>
+        </thead>
+      
+        <tbody>
+        <tr>
+          <td class="cel01">222</td><td class="cel02">입지기준확인신청서(공장등)</td><td>경제과</td><td><img src="./images/hwp.gif" alt="문서첨부 아이콘"></td><td class="cel03">2014-12-17</td>
+        </tr>
+      
+        <tr>
+          <td class="cel01">221</td><td class="cel02">창업사업게획승인서식</td><td>경제과</td><td><img src="./images/zip.gif" alt="v파일 아이콘"></td><td class="cel03">2014-12-17</td>
+        </tr>
+      
+        <tr>
+          <td class="cel01">220</td><td class="cel02">공동산설등승인신청서서식</td><td>경제과</td><td><img src="./images/zip.gif" alt="v파일 아이콘"></td><td class="cel03">2014-12-17</td>
+        </tr>
+      
+        <tr>
+          <td class="cel01">219</td><td class="cel02">공장등록(변경)신청서서식</td><td>경제과</td><td><img src="./images/zip.gif" alt="v파일 아이콘"></td><td class="cel03">2014-12-17</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <br>
+  </body>
+</html>

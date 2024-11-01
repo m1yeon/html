@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="KO">
+  <head>
+    <meta charset="utf-8">
+    <title>06_목록태그</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+      *{font-family: "Noto Sans KR", sans-serif; padding: 0px 10px;}
+      p{margin: 0px;}
+      h3{margin: 10px 0px; padding: 10px; font-size: 18px;}
+    
+      .b_btn{
+        display: inline-block;
+        width: 50px; height: 50px;
+        background: #111;
+        padding: 0px;
+        text-align: center;
+        border-radius: 50%;
+        margin-top: 10px;
+      }
+      .b_btn > img{
+        width: 30px;
+        transform: translateY(9px);
+      }
+      .box{
+        border: 1px solid #333;
+        border-radius: 15px;
+        padding-bottom: 20px;
+      }
+      .dl_box{
+        background: #eee;
+        padding: 20px 0px;
+        border-radius: 15px; 
+        /* width: 300px; */
+      }
+      .ol_box, .ul_box{
+        background: #eee;
+        padding: 20px 10px 20px 40px;
+        border-radius: 15px;
+        width: fit-content;
+        display: inline-block;
+        margin-right: 20px;
+      }
+      .list_2{
+        padding-left: 40px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a href="../index.html" title="메인페이지 바로가기" class="b_btn">
+      <img src="../images/icon_home.png" alt="icon_home">
+    </a>
+    <h2>06_목록태그(list)</h2>
+    <p>: 목록(list)이란? 관련있는 주제에 맞는 내용을 나열하고자 할 때 사용하며,<br>
+    : 목록관련태그에는 '정의목록', '순차목록', '비순차목록'이 있음</p>
+      <br>
+    <div class="box">
+      <h3>1. 정의목록</h3>
+      <p>: <b>용어에 대한 정의를 내릴 때 사용</b>하며, <br> dl(definition list), dt(definition term), dd(definition description)태그로 작성함</p>
+
+      <dl class="dl_box">
+        <dt>dt : 제목</dt>
+        <dd>dd : 설명1</dd>
+        <dd>dd : 설명2</dd>
+      </dl>
+
+      <dl class="dl_box">
+        <dt>html이란?</dt>
+        <dd>Hypertext markup language의 약자로서 웹문서의 구조를 만들기 위한 언어이다.</dd>
+        <dd>문법이 간단하기 때문에 누구나 쉽게 익힐 수 있다.</dd>
+        <dd>문서를 작성하고 저장 시 반드시 확장자는 .html 또는 .htm으로 저장한다.</dd>
+        <dd>가장 최신버전은 html5이다.</dd>
+      </dl>
+    </div>
+    <br>
+
+    <div class="box">
+      <h3>2. 순차목록</h3>
+      <p>: 순차목록은<b>순서가 있는 목록</b>으로서 order list의 약자인<b>ol, li태그 요소를 사용</b>
+      <br>: type 속성을 사용하여 숫자, 영문 대/소문자, 로마자 대/소문자로 기호를 변경할 수 있음<br>
+      : 최신뉴스, 영화랭킹, 실시간 음원순위 등에서 사용됨
+      </p>
+
+      <ol type="1" class="ol_box">
+        <li>순차목록 type="1"</li>
+        <li>순차목록 type="1"</li>
+        <li>순차목록 type="1"</li>
+      </ol>
+      <ol type="A" class="ol_box">
+        <li>순차목록 type="A"</li>
+        <li>순차목록 type="A"</li>
+        <li>순차목록 type="A"</li>
+      </ol>
+      <ol type="I" class="ol_box">
+        <li>순차목록 type="I"</li>
+        <li>순차목록 type="I"</li>
+        <li>순차목록 type="I"</li>
+      </ol>
+    </div>
+    <br>
+    <div class="box">
+      <h3>3. 비순차목록</h3>
+      <p>: <b>순서가 없는 목록</b>으로 unorder list의 약자인 ul,li태그를 사용하며,<br>
+        : type 속성을 사용하여 circle(기본값), square모양으로 변경이 가능함<br>
+        : 웹페이지의 내비게이션 메뉴, 쇼핑몰 메뉴, 이미지 갤러리, 상품 목록, 글 목록 등의 콘텐츠 작성 시 사용하며 가장 많이 사용하는 태그 중 하나임
+      </p>
+
+      <ul class="ul_box">
+        <li>순서없는 목록</li>
+        <li>순서없는 목록</li>
+        <li>순서없는 목록</li>
+      </ul>
+      
+      <ul type="circle" class="ul_box">
+        <li>순서없는 목록</li>
+        <li>순서없는 목록</li>
+        <li>순서없는 목록</li>
+      </ul>
+      
+      <ul type="square" class="ul_box">
+        <li>순서없는 목록</li>
+        <li>순서없는 목록</li>
+        <li>순서없는 목록</li>
+      </ul>
+    </div>
+    <br>
+    <div class="box">
+      <h3>4. 목록과 목록태그를 삽입하여 2중 목록 만들기</h3>
+      <ul class="list_2">
+        <li>관람정보
+          <ul>
+            <li>관람안내</li>
+            <li>전시해설</li>
+          </ul>
+        </li>
+        <li>전시
+          <ul>
+            <li>상설전시</li>
+            <li>특별전시</li>
+          </ul>
+        </li>
+      
+        <li>교육</li>
+      
+        <li>문화행사
+          <ul>
+            <li>행사</li>
+            <li>공연</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

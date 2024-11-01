@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>03_인용문 태그_04_프리태그</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+      *{font-family: "Noto Sans KR", sans-serif; padding: 0px 10px; }
+
+      .b_btn{
+        display: inline-block;
+        width: 50px; height: 50px;
+        background: #111;
+        padding: 0px;
+        text-align: center;
+        border-radius: 50%;
+        margin-top: 10px;
+      }
+      .b_btn > img{
+        width: 30px;
+        transform: translateY(9px);
+      }
+
+      .box_wrap{display: flex; gap: 20px; padding-top: 20px;} 
+      .box{border: 1px solid #333; padding: 20px; border-radius: 10px; width: 300px; margin-bottom: 20px;}
+
+      .line{display: inline-block; border-bottom: 1px solid #222; width: 1000px;}
+    </style>
+  </head>
+
+  <body>
+    <a href="../index.html" title="메인페이지 바로가기" class="b_btn">
+      <img src="../images/icon_home.png" alt="icon_home">
+    </a>
+
+    <h2>03_인용문 태그 : blockquote, q</h2>
+    <p>- 인용문이란? 다른 사람의 말이나 글을 대신해서 표현하는 글을 말하며, ""또는 ''기호를 사용한다.</p>
+    <p>- blockquote : 들여쓰기</p>
+    <p>- q는 쌍따옴표 ""인용문</p>
+
+    <div class="box_wrap">
+      <div class="box">
+        <h3>1. blockquote 태그</h3>
+        <p>페이스북 CEO 마크주커버그</p>
+        <blockquote>
+          수십번 넘어져도 젊음을 무기삼아 도전하라!
+        </blockquote>
+      </div>
+
+      <div class="box">
+        <h3>2. q 태그</h3>
+        <p>애플 CEO 스티브 잡스</p>
+        <q>우리의 실패는 경험으로 부터 강해졌다.</q>
+      </div>
+    </div>
+    <span class="line"></span>
+    <h2>04_프리태그</h2>
+<p>pre-preformatted text의 약자로서 사용자가 작성한 내용을 그대로 화면에 표시해주는 태그이다.</p>
+<p>자주 사용하지는 않고, 수식이나 특별한 경우에만 사용한다.</p>
+<p>글자가 원래 글자 크기보다 작게 나오는 것이 특징이다.</p>
+
+<pre class="box">
+  pre태그는                     띄어쓰기 태그
+              줄변경 태그를 사용하지 않아도
+        사용자가              입력한   내용을
+    화면 그대로    출력해 준다.
+</pre>
+  </body>
+</html>

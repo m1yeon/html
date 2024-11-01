@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>폼태그_실습예제_문의하기 양식 만들기</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+      *{font-family: "Noto Sans KR", sans-serif;}
+      h2{margin-left: 5%; padding-bottom: 20px;}
+      .b_btn{
+        display: inline-block;
+        width: 50px; height: 50px;
+        background: #111;
+        padding: 0px;
+        text-align: center;
+        border-radius: 50%;
+        margin-top: 20px;
+        margin-left: 5%;
+      }
+      .b_btn > img{
+        width: 30px;
+        transform: translateY(9px);
+      }
+
+      .con_wrap{width: 85%; margin: 0 auto;
+        background: #eee;
+        padding: 2.5%;
+        border-radius: 15px;
+      }
+      .notice01{
+        width: 100%;
+        margin: 10px auto;
+        text-align: right;
+        color: #333;}
+
+      .tit01{font-weight: bold;}
+
+      .star{color: #ff0000;}
+
+      .t01{
+        width: 100%;
+        margin: 0px auto;
+        border-top: 2px solid #000;
+        border-bottom: 1px solid #ccc;
+        border-collapse: collapse;
+        }
+
+      .t01 tr{
+        height: 50px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .btn{width: 100%; text-align: center; padding-top: 40px;}
+      .btn01, .btn02{
+        text-decoration: none;
+        padding: 10px 40px;
+        border-radius: 7px;
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      .btn01{
+        color: #fff;
+        background: rgb(47, 67, 122);}
+
+        .btn02{
+        color: #fff;
+        background:#777;}
+
+    </style>
+  </head>
+
+  <body>
+    <a href="../index.html" title="메인페이지 바로가기" class="b_btn">
+      <img src="../images/icon_home.png" alt="icon_home">
+    </a>
+    <h2>폼태그_실습예제_문의하기 양식 만들기</h2>
+    
+    <div class="con_wrap">
+      <h3>문의하기</h3>
+      <p class="notice01"><span class="star">*</span> 표시는 필수 입력 항목입니다.</p>
+      <form name="qna" method="post" action="dfh.php">
+        <table class="t01">
+        <tr>
+          <td class="tit01"><span class="star">*</span> 문의유형</td>
+          <td>
+            <select>
+              <option>제품 문의</option>
+              <option>배송 문의</option>
+              <option>교환/환불 문의</option>
+            </select>
+          </td>
+        </tr>
+      
+        <tr>
+          <td class="tit01"><span class="star">*</span> 성함 </td>
+          <td><input type="text" maxlength="20"></td>
+        </tr>
+      
+      <tr>
+        <td class="tit01"><span class="star">*</span> 회사명</td>
+        <td><input type="text" maxlength="20"></td>
+      </tr>
+      
+      <tr>
+        <td class="tit01"><span class="star">*</span> 직급</td>
+        <td><input type="text" maxlength="20"></td>
+      </tr>
+      
+      <tr>
+        <td class="tit01"><span class="star">*</span> 부서명</td>
+        <td><input type="text" maxlength="20"></td>
+      </tr>
+      
+      <tr>
+        <td class="tit01"><span class="star">*</span> 회사규모</td>
+        <td>      
+          <select >
+          <option value="">1~10</option>
+          <option value="">11~50</option>
+          <option value="">51~100</option>
+        </select></td>
+      </tr>
+      
+      <tr>
+        <td class="tit01"><span class="star">*</span> 기관구분</td>
+        <td>
+            <input type="radio" name="ro1" id="a"><label for="a">기업</label>
+            <input type="radio" name="ro1" id="b"><label for="b">공공</label>
+            <input type="radio" name="ro1" id="c"><label for="c">금융</label>
+            <input type="radio" name="ro1" id="d"><label for="d">교육</label>
+            <input type="radio" name="ro1" id="e"><label for="e">기타</label>
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="tit01"><span class="star">*</span> 전화번호</td>
+        <td>
+            <select>
+              <option value="">010</option>
+              <option value="">070</option>
+              <option value="">02</option>
+            </select> -  
+            <input type="text" maxlength="6"> -  
+            <input type="text" maxlength="6">
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="tit01"><span class="star">*</span> E-mail</td>
+        <td>
+          <input type="text" maxlength="20"> @ <input type="text" maxlength="20"> 
+          <select>
+            <option value="">메일계정선택</option>
+            <option value="">naver.com</option>
+            <option value="">daum.co.kr</option>
+          </select>
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="tit01"> 문의제품</td>
+        <td>
+            <input type="checkbox" id="c01"><label for="c01"> PC 화면 보안</label>
+            <input type="checkbox" id="c02"><label for="c02"> 모바일 App 보안</label>
+            <input type="checkbox" id="c03"><label for="c03"> 멀티미디어 보안</label>
+            <input type="checkbox" id="c04"><label for="c04"> CCTV 보안</label> <br>
+            <input type="checkbox" id="c05"><label for="c05"> 문서 DRM</label>
+            <input type="checkbox" id="c06"><label for="c06"> 웹 위변조 보안</label>
+            <input type="checkbox" id="c07"><label for="c07"> 취약점 통합 보안</label>
+            <input type="checkbox" id="c08" class="box01"><label for="c08"> 기타</label>
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="tit01"><span class="star">*</span> 방문경로</td>
+        <td>
+            <input type="radio" name="r01" id="a"><label for="a">네이버 검색</label>
+            <input type="radio" name="r01" id="b"><label for="b">구글 검색</label>
+            <input type="radio" name="r01" id="c"><label for="c">다음검색</label>
+            <input type="radio" name="r01" id="d"><label for="d">보도자료</label>
+            <input type="radio" name="r01" id="e"><label for="e">신문광고</label>
+            <input type="radio" name="r01" id="f"><label for="f">네이버 검색</label> <br>
+            <input type="radio" name="r01" id="g"><label for="g">온라인광고</label>
+            <input type="radio" name="r01" id="h"><label for="h">지인소개</label>
+            <input type="radio" name="r01" id="i"><label for="i">뉴스레터</label>
+            <input type="radio" name="r01" id="j"><label for="j">기타</label> <input type="text">
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="tit01"> 문의내용</td>
+        <td><input type="text" class="txt_box"></td>
+      </tr>
+      </table>
+      
+      <div class="btn">
+      <a href="#" title="문의하기" class="btn01">문의하기</a>
+      <a href="#" title="취소하기" class="btn02">취소하기</a>
+      </div>
+      </form>  
+    </div>
+
+
+
+  </body>
+</html>

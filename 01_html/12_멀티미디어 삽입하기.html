@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>12_멀티미디어 삽입하기</title> 
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+      *{font-family: "Noto Sans KR", sans-serif; padding: 0px 10px;}
+      p{margin: 0px;}
+      h3{margin: 10px 0px; padding: 10px; font-size: 18px;}
+    
+      .b_btn{
+        display: inline-block;
+        width: 50px; height: 50px;
+        background: #111;
+        padding: 0px;
+        text-align: center;
+        border-radius: 50%;
+        margin-top: 10px;
+      }
+      .b_btn > img{
+        width: 30px;
+        transform: translateY(9px);
+      }
+      b{padding: 0px;}
+      .box{
+        border: 1px solid #333;
+        border-radius: 15px;
+        padding-bottom: 20px;
+      }
+      .box > img, .box > video{width: 600px; padding-top: 20px;}
+    </style>
+  </head>
+
+  <body>
+    <a href="../index.html" title="메인페이지 바로가기" class="b_btn">
+      <img src="../images/icon_home.png" alt="icon_home">
+    </a>
+    <h2>13_멀티미디어 삽입하기</h2>
+    <p>- 멀티미디어(multimedia) : multi + media 영상과 매체의 합성어 다중 매체라고 함 <br>
+    <p>- 책, tv, 책, 라디오, 신문, 잡지 등을 말하며 오늘날에는 인터넷의 비중이 많이 커짐</p>
+    <p>- 또한 사용자는 pc, tablet, mobile, smart watch, laptop 기기를 통하여 정보를 접함</p>
+
+    <p>- 웹페이지를 구성하는 요소에는 문자, 이미지, 콘텐츠외에 영상이나, 사운드, 플래시 애니메이션(은 없어짐) 등이 멀티미디어에 속함</p>
+    <p>- <b>영상이나 사운드를 삽입하기 위한 태그요소</b>를 '<b>멀티미디어 태그</b>'라고 함</p>
+
+    <p>- html5 이전에서는 objectm embed라는 태그를 사용했지만 w3c에서는 <b>html5 웹표준에서 지정한 video, audio태그를 추가하여 표준화</b> 하였다.</p>
+    <br>
+    <div class="box">
+      <h3>1. 음악 파일의 종류와 삽입방법 : mp3, ogg</h3>
+      <audio src="./media/Kalimba.mp3" controls></audio>
+      <audio src="./media/Kalimba.ogg" controls></audio>
+
+      <audio controls>
+        <source src="./media/Kalimba.mp3" type="audio/mp3">
+        <source src="./media/Kalimba.ogg" type="audio/ogg">
+        <p>이 브라우저에서는 지원되지 않는 콘텐츠가 있습니다. 시스템을 업그레이드 하세요.</p>
+      </audio>
+
+      <p>- 음악파일의 확장자는 시스템이나 사용자 환경, 브라우저의 종류, 버전에 따라 지원이 안되는 경우가 있기 때문에 대체할 음악을 미리 넣어주거나 대체 문구를 삽입해줌</p>
+      <p>- 사용자의 컴퓨터에서 어떤 파일 형식이 지원되는지 모르기 때문에 오디오 파일 형식 2개를 같이 넣어줌(둘 다 사용가능하다면 앞에 있는 것이 먼저 재생됨)</p>
+      <p>- autoplay : 자동 재생 기능, 웹접근성을 준수하기 위해서 이 기능은 사용하지 않아야함 <br>시각장애인, 심신미약자들은 노래가 갑자기 나오면 놀랄 수 있기 때문</p>
+      <img src="./images/13_multimedia.JPG" alt="음악파일 삽입하기">
+    </div>
+    <br>
+    <div class="box">
+      <h3>2. 영상 파일 삽입하기 : mp4, webm, ogv </h3>
+      <p>- mp4 확장자는 모든 브라우저에서 잘 지원되지만<br>
+        - webm확장자는 익스플로러, 사파리, 안드로이드 브라우저에서는 지원이 안됨<br>
+      - 따라서 webm, ogv 확장자 사용시 대체영상을 넣어준다.</p>
+      <video src="./media/Painting.mp4" controls></video>
+      <!-- <video controls autoplay muted>
+        <source src="./media/Painting.mp4">
+        <source src="./media/Painting.webm">
+      </video>  -->
+      <img src="./images/13_multimedia2.JPG" alt="동영상파일 삽입하기">
+
+    </div>
+    <br>
+
+
+
+
+<!-- autoplay 자동재생, muted 음소거  ) 영상은 자동재생시 음소거를 해야지만 자동재생이 됨 _ 웹접근성을 위해서 -->
+
+  </body>

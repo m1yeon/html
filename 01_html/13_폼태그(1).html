@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>13_폼(form)태그</title>
+  <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+      *{font-family: "Noto Sans KR", sans-serif; padding: 0px 10px;}
+      p{margin: 0px;}
+      h3{margin: 10px 0px; padding: 10px; font-size: 18px;}
+    
+      .b_btn{
+        display: inline-block;
+        width: 50px; height: 50px;
+        background: #111;
+        padding: 0px;
+        text-align: center;
+        border-radius: 50%;
+        margin-top: 20px;
+      }
+      .b_btn > img{
+        width: 30px;
+        transform: translateY(9px);
+      }
+      fieldset{padding: 10px;}
+      b{padding: 0px;}
+      .btn00{height: 40px;}
+      .img_btn{padding: 0px; transform: translateY(14.5px);}
+  </style>
+</head>
+
+<body>
+  <a href="../index.html" title="메인페이지 바로가기" class="b_btn">
+    <img src="../images/icon_home.png" alt="icon_home">
+  </a>
+  <h2>14_폼(form)태그</h2>
+  
+  <h3>1. 폼 태그란?</h3>
+  <p>
+    - 사용자가 입력한 정보(아이디, 패스워드 등)을 서버로 전송하는 역할을 하며, <br>
+    - 폼태그를 활용한 양식의 종류에는 로그인폼, 검색폼, 예약폼 등의 다양한 양식을 만들 수 있음.
+  </p>
+  <h3>2. 폼태그의 종류</h3>
+  <p>form, input, select/option, textarea, label, button, fieldset, fieldset, legend</p>
+
+  <h3>3. get / post</h3>
+  <p>
+    - 사용자가 버튼을 누르면 그 정보를 서버에 전송시킬 때, post=암호화 시킬지, get=시키지 않을지 선택하는 것 암호화 시키지 않으면 내가 입력한 내용이 홈페이지 주소에 뜸 <br>
+    - get : 암호화 하지 않으며, 테이터가 많지 않은 내용일 때 사용 <br>
+    - post : 암호화를 하며, 보낼 데이터가 많을 때 사용 (요즘엔 get 방식을 사용하지 않는 추세) <br>
+    - 양식을 만들 때 하나로 묶어서 작업하지 않고 부분 부분 쪼개서 양식을 만들기 때문에  fieldset로 영역을 쪼개서 작업함
+  
+    </p>
+
+  <h3>4. 폼태그 사용하기</h3>
+  <form name="폼이름" method="get/post" action="받을서버주소">
+  <fieldset>
+    <legend>폼그룹 제목</legend>
+    1. 텍스트박스 : 문자를 입력하기 위한 박스로서 '아이디', '검색', '주소',
+    '문의하기 제목' 등
+    <input type="text">
+  <br><br>
+    2. 패스워드 박스 : 비밀번호, 비밀번호확인, 주민번호, 카드번호, 개인정보 작성 시 글자가 보이지 않게 '기호'로 표시되게 함
+    <input type="password" maxlength="16">
+  <br><br>
+    3. 라디오버튼 : 여러개의 항목 중 하나만 선택이 가능한 양식
+    <input type="radio"  name="a">동의함
+    <input type="radio" name="a">동의안함
+  <br><br>
+    <input type="radio" name="b">남
+    <input type="radio" name="b">여
+
+    <p>다음 보기 중 맞는 항목을 선택하세요</p>
+    <input type="radio" name="c" id="1"><label for="1">1</label>
+    <input type="radio" name="c" id="2"><label for="2">2</label>
+    <input type="radio" name="c" id="3"><label for="3">3</label>
+    <input type="radio" name="c" id="4"><label for="4">4</label>
+    <input type="radio" name="c" id="5"><label for="5">5</label>
+  <br><br>
+    4. 체크박스 : 체크박스(여러개의 항목들 중 사용하자 원하는 항목만 선택 할 수 있는 양식)<br>
+    나의 취미
+    <input type="checkbox" id="c01"><label for="c01">음악감상</label>
+    <input type="checkbox" id="c02"><label for="c02">독서</label>
+    <input type="checkbox" id="c03"><label for="c03">운동</label>
+    <input type="checkbox" id="c04"><label for="c04">게임</label>
+    <input type="checkbox" id="c05"><label for="c05">기타</label>
+  <br><br>
+  5. 선택목록 : 쇼핑몰 옵션선택, 전화번호 입력 통신사 선택, 예매목록, 인원수, 언어설정, 패밀리사이트 등의 <br>양식을 만들고자 할 때 사용하는 양식
+  <select >
+    <option value="">언어설정</option>
+    <option value="">한국어</option>
+    <option value="">영어</option>
+    <option value="">중국어</option>
+  </select>
+
+  <select>
+    <option value="">Family Site</option>
+    <option value="">네이버</option>
+    <option value="">다음</option>
+    <option value="">네이트</option>
+  </select>
+  <br><br>
+  6. 다중텍스트 박스 : 한 줄 입력이 아닌 여러 줄의 내용을 입력하고자 할 때 사용
+  <input type="text">
+  <br><br>
+  7. 파일첨부 : 게시판이나 이메일 양식에서 상대방에서 파일을 첨부하여 보내기 위한 양식 <br>
+  <input type="file">
+  <br><br>
+  8. 버튼 : 전송하기, 취소하기, 일반버튼, 이미지버튼 <br>
+  <input type="submit" value="로그인하기" class="btn00">
+  <input type="reset" value="조회하기" class="btn00">
+  <input type="reset" value="취소하기" class="btn00">
+  <input type="reset" value="다시쓰기" class="btn00">
+  <input type="button" value="중복확인" class="btn00">
+  <input type="button" value="선물하기" class="btn00">
+  <input type="image" src="./images/naver_login_btn.png" class="btn00 img_btn">
+  </fieldset>
+  
+  </form>
+  <br>
+</body>
+</html>

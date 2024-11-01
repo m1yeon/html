@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>08_하이퍼링크</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+      *{font-family: "Noto Sans KR", sans-serif; padding: 0px 10px;}
+      p{margin: 0px;}
+      h3{margin: 10px 0px; padding: 10px; font-size: 18px;}
+    
+      .b_btn{
+        display: inline-block;
+        width: 50px; height: 50px;
+        background: #111;
+        padding: 0px;
+        text-align: center;
+        border-radius: 50%;
+        margin-top: 10px;
+      }
+      .b_btn > img{
+        width: 30px;
+        transform: translateY(9px);
+      }
+      html, body{
+        scroll-behavior: smooth;
+      }
+
+      .link01{color: #333;
+      text-decoration:none;
+      padding: 6px 12px;
+      border: 1px solid #333;
+      border-radius: 50px;}
+
+      .top_btn{
+        width: 50px; height: 50px;
+        padding: 0px;
+        border-radius: 1px solid #333;
+        display: block;
+        line-height: 50px;
+        text-align: center;
+        box-shadow: 0px 0px 4px #333;
+        position: fixed;
+        right: 40px; bottom: 50px;
+        background-color: #fff;
+        border-radius: 50%;
+        text-decoration: none;
+        color:#333;
+      }
+      .box{
+        border: 1px solid #333;
+        border-radius: 15px;
+        padding-bottom: 20px;
+      }
+
+    </style>
+
+
+  </head>
+
+  <body>
+    <a href="../index.html" title="메인페이지 바로가기" class="b_btn">
+      <img src="../images/icon_home.png" alt="icon_home">
+    </a>
+    <a href="#bottom_btn" title="아래로 내려가기" class="bottom_btn">BOTTOM</a>
+    <h2 id="title">09_하이퍼링크</h2>
+    <p>하이퍼링크란?<br>
+      하이퍼텍스트로 이루어진 문서에서 사용자가 마우스로 클릭을 하였을 때 다른 문서나 페이지로 이동하기 위한 요소로서<br><br>
+
+        1. <a href="#link_txt" title="텍스트 하이퍼링크 바로가기">텍스트 하이퍼링크</a>,<br>
+        2. <a href="#link_img" title="이미지 하이퍼링크 바로가기">이미지 하이퍼링크</a>,<br> 
+        3. <a href="#link_email" title="이메일 하이퍼링크 바로가기">이메일 하이퍼링크</a>,<br>
+        4. <a href="#link_loc" title="특정문서 이동 하이퍼링크 바로가기">특정문서의 특정위치로 이동하기 위한 링크</a>,<br>
+        5. 하나의 이미지에 여러개의 링크를 할 수 있는 이미지 맵 링크가 있음<br>
+    </p>
+    <p>작성법 : anchor hyper reference의 약자인 a태그와 href속성, title 속성을 사용한다</p>
+<br>
+    <div class="box">
+      <h3 id="link_txt">1. 텍스트에 하이퍼링크 걸기</h3>
+      <p>- 바로가기, 자세히보기, 더보기, 로그인하기, 비번찾기 등</p>
+      <p>- 텍스트 링크는 기본적으로 밑줄, 파랑색으로 표시되며, 한 번 이상 누른적이 있는 경우 보라색으로 변경됨.</p><br>
+      <a href="http://www.naver.com" title="네이버 바로가기" class="link01">네이버 바로가기</a>
+      <a href="http://www.daum.net" title="다음 바로가기" class="link01">다음 바로가기</a>
+    </div>
+    <br>
+    <div class="box">
+      <h3 id="link_img">2. 이미지에 하이퍼링크 걸기</h3>
+      <a href="http://naver.com" title="네이버 바로가기">
+        <img src="./images/1026_naver_logo.gif" alt="네이버 로고">
+      </a>
+      <a href="https://www.baskinrobbins.co.kr/" title="배스킨라빈스 바로가기">
+        <img src="./images/1026_be.svg" alt="배스킨라빈스 로고">
+      </a>
+      <a href="https://www.subway.co.kr/" title="서브웨이 바로가기">
+        <img src="./images/1026_logo_app.png" alt="서브웨이 로고">
+      </a>
+    </div>
+    <br>
+    <div class="box">
+      <h3>3. 이메일 링크</h3>
+      <p>mailto : 홈페이지, 브랜드 관리자 이메일 연결</p>
+      <a href="mailto:webmaster@naver.com" title="관리자에게 메일보내기">관리자에게 메일 보내기</a>
+    </div>
+    <br>
+    <div class="box">
+      <h3>4. 특정 위치로 이동하기 위한 네임앵커</h3>
+      <p><b>네임앵커란?</b> 특정위치에 id값을 표시한 후 하이퍼링크시 즈소에 아이디값을 설정하면 특정위치로 페이지가 이동하는 기능(책갈피기능)</p>
+      <a href="#link_txt">2. 이미지에 하이퍼링크 걸기</a>
+    </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <p id="bottom_btn">END</p>
+  <br><br>
+  <a href="#title" title="위로 바로가기" class="top_btn">TOP</a>
+
+  </body>
+</html>
