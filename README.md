@@ -1,2 +1,2 @@
 # html
-studying HTML5
+html, html5
